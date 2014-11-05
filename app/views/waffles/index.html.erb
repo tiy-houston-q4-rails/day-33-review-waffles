@@ -1,0 +1,19 @@
+<h1>Waffles#index</h1>
+<p>Find me in app/views/waffles/index.html.erb</p>
+<% @waffles.each do |waffle| %>
+
+
+  <div class="modal">
+    <label for="modal-1">
+      <div class=" js-btn"><%= image_tag waffle.photo.url(:thumb) %></div>
+    </label>
+    <input class="modal-state" id="modal-1" type="checkbox" />
+    <div class="modal-window">
+      <div class="modal-inner">
+        <label class="modal-close" for="modal-1"></label>
+        <%= image_tag waffle.photo.url %>
+      </div>
+    </div>
+  </div>
+
+<% end %>
